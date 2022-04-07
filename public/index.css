@@ -1,16 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .app {
+    margin: auto;
     display: grid;
     grid-template-columns: 150px 1fr;
     grid-template-rows: min-content 1fr min-content;
 }
 
-.buttonLink {
+.button__link {
     border-radius: 20px;
     background: black;
     color: white;
@@ -40,20 +35,19 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(47, 41, 41);
+    background-color: rgb(103, 98, 98);
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
-.dropdown-content a {
-    color: white;
+.dropdown-content__elem {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {
+.dropdown-content__elem:hover {
     background-color: #ddd;
 }
 
@@ -65,7 +59,7 @@
     background-color: rgba(255, 255, 255, .1);;
 }
 
-.iconProfile {
+.icon-profile {
     background: white;
     border-radius: 100%;
     margin: 0;
@@ -91,7 +85,7 @@
     align-items: center;
 }
 
-.lineHeader {
+.line-header {
     border-bottom: 1px solid grey;
 }
 
@@ -107,12 +101,12 @@
 .tags {
     list-style: none;
     font-size: 18px;
+    padding-left: 6px;
 }
 
 .tag {
     cursor: pointer;
-    margin-left: 0;
-    padding: 15px 16px;
+    padding: 15px 1px;
     font-size: 25px;
     display: flex;
     align-items: center;
@@ -224,6 +218,15 @@
     .albums {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .albumPhotoSinger {
+        height: 240px;
+        width: 240px;
+    }
+    .albumPhoto{
+        height: 240px;
+        width: 240px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -234,11 +237,29 @@
     .audio {
         width: 320px;
     }
+
+    .albumPhotoSinger {
+        height: 160px;
+        width: 160px;
+    }
+    .albumPhoto{
+        height: 160px;
+        width: 160px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .albums {
         grid-template-columns: 1fr;
+    }
+
+    .albumPhotoSinger {
+        height: 80px;
+        width: 80px;
+    }
+    .albumPhoto{
+        height: 80px;
+        width: 80px;
     }
 }
 
